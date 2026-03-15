@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
@@ -57,11 +58,15 @@ const NavBar = () => {
       >
         <div className="flex items-center justify-between gap-4 px-4 py-3 md:px-6">
           <Link href="/" className="flex items-center gap-3" onClick={closeAllMenus}>
-            <span
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#cad0d9] bg-white text-sm font-semibold text-[#1f3350]"
-              style={{ fontFamily: 'var(--font-space), sans-serif' }}
-            >
-              IG
+            <span className="relative h-10 w-10 overflow-hidden rounded-xl border border-[#cad0d9] bg-white">
+              <Image
+                src="/ighost-logo.png"
+                alt="IGHOST logo"
+                fill
+                className="object-cover"
+                sizes="40px"
+                priority
+              />
             </span>
             <span>
               <span

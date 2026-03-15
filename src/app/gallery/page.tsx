@@ -1,4 +1,17 @@
-const galleryItems = [
+import Image from 'next/image';
+
+type GalleryItem = {
+  title: string;
+  tag: string;
+  image?: string;
+};
+
+const galleryItems: GalleryItem[] = [
+  {
+    title: 'IGHOST Ambassador Team Portrait',
+    tag: 'Studio Session 2026',
+    image: '/gallery/ighost-team-portrait.jpg',
+  },
   { title: 'Youth Camp Workshop', tag: 'Durban 2026' },
   { title: 'Women Empowerment Awards', tag: 'Johannesburg 2026' },
   { title: 'Community Drug Awareness', tag: 'KwaZulu-Natal 2026' },
@@ -26,8 +39,18 @@ export default function GalleryPage() {
       <section className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {galleryItems.map((item, i) => (
           <article key={item.title} className="panel rise overflow-hidden" style={{ animationDelay: `${i * 70}ms` }}>
-            <div className="aspect-[4/3] bg-[linear-gradient(135deg,#dde5f1,#f0ebe2)] p-5">
-              <div className="h-full w-full rounded-xl border border-white/70 bg-[rgba(255,255,255,0.65)]" />
+            <div className="relative aspect-[4/3] bg-[linear-gradient(135deg,#dde5f1,#f0ebe2)] p-3">
+              {item.image ? (
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="rounded-xl object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              ) : (
+                <div className="h-full w-full rounded-xl border border-white/70 bg-[rgba(255,255,255,0.65)]" />
+              )}
             </div>
             <div className="p-5">
               <h2

@@ -18,7 +18,11 @@ const space = Space_Grotesk({
 export const metadata: Metadata = {
   title: "IGHOST | Architecture of Culture",
   description:
-    "IGHOST Edutainment empowers artists and communities through events, mentorship, and creative commerce.",
+    "IGHOST Edutainment NPC develops artists and communities through events, awards, camps, wellness support, women empowerment, and drug awareness.",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -42,10 +46,10 @@ export default function RootLayout({
                       className="mt-1 text-2xl font-semibold text-[#121522]"
                       style={{ fontFamily: "var(--font-space), sans-serif" }}
                     >
-                      Monthly Opportunities and Event Drops
+                      Events, Ambassador Calls, and IGHOST Updates
                     </h3>
                     <p className="mt-2 text-sm text-muted">
-                      Get updates about new events, merch releases, and ambassador pathways.
+                      Follow new events, ambassador opportunities, and community activity from IGHOST Edutainment.
                     </p>
                   </div>
                   <div className="flex gap-2">
@@ -70,11 +74,11 @@ export default function RootLayout({
                     IGHOST Edutainment
                   </p>
                   <p className="mt-2 text-sm text-muted">
-                    Designing opportunity for artists, leaders, and communities through structured
-                    events, mentorship, and creative commerce.
+                    A non-profit company founded in 2021 by Miss A. Mhlongo (iGhostikazi) to host,
+                    support, and grow artists and youth nationally.
                   </p>
                   <p className="mt-3 text-xs uppercase tracking-[0.1em] text-[#5f7695]">
-                    Architecture of Culture
+                    Ungaphiki Nathi, Phila Nathi
                   </p>
                 </div>
 
@@ -108,10 +112,10 @@ export default function RootLayout({
                 </div>
 
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#5f7695]">Operations</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#5f7695]">Focus Areas</p>
                   <p className="mt-3 text-sm text-muted">
-                    Monday to Friday, 08:00 to 17:00 SAST. For content updates, use the admin
-                    manager portal.
+                    Talent development, artists health, women empowerment, and drug awareness are
+                    the four core areas described in the IGHOST presentation.
                   </p>
                   <Link href="/admin" className="mt-3 inline-flex rounded-full border border-[#d5dbe5] bg-white px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.08em] text-[#2e4f7a] hover:border-[#8fa2bc]">
                     Admin Content Manager

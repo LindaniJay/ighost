@@ -33,7 +33,7 @@ const AmbassadorForm: React.FC<AmbassadorFormProps> = ({ onSubmit }) => {
           Ambassador Application
         </h3>
         <p className="mt-1 text-sm text-muted">
-          Tell us about your motivation and how you want to represent IGHOST.
+          Tell us about your motivation and how you want to live a true IGHOST life as a brand ambassador.
         </p>
       </div>
 
@@ -58,7 +58,7 @@ const AmbassadorForm: React.FC<AmbassadorFormProps> = ({ onSubmit }) => {
       </div>
 
       <textarea
-        placeholder="Why do you want to become an IGHOST ambassador?"
+        placeholder="Why do you want to become an IGHOST ambassador and represent the brand?"
         value={motivation}
         onChange={e => setMotivation(e.target.value)}
         className="min-h-32 w-full rounded-xl border border-[#d2d7e0] bg-white px-4 py-3 text-sm outline-none focus:border-[#5f7695] focus:ring-2 focus:ring-[#d6dfec]"
@@ -74,7 +74,7 @@ const AmbassadorForm: React.FC<AmbassadorFormProps> = ({ onSubmit }) => {
 
       {sent && (
         <div className="rounded-xl border border-[#b8d8c7] bg-[#eef9f1] px-4 py-3 text-sm font-medium text-[#1e6a45]">
-          Application sent successfully. We will contact you soon.
+          Application sent successfully. IGHOST will contact you soon.
         </div>
       )}
     </form>

@@ -8,24 +8,24 @@ import { defaultEvents, type EventItem } from '../../utils/contentData';
 
 const experienceStandards = [
   {
-    title: 'Curated Program Design',
-    text: 'Each event has a clear curriculum, outcomes framework, and expert facilitator pairing.',
+    title: 'Events, Awards and Camps',
+    text: 'Our programs are built around live events, awards, and camps that help artists grow through exposure and participation.',
   },
   {
-    title: 'Safe and Structured Spaces',
-    text: 'Operational standards include access control, participant support, and event risk planning.',
+    title: 'Youth Development',
+    text: 'Each event is designed to strengthen confidence, discipline, leadership, and practical experience.',
   },
   {
-    title: 'Measured Impact',
-    text: 'We track participation, completion, and post-event opportunities to improve every cycle.',
+    title: 'Community Impact',
+    text: 'We connect programs to wellness, empowerment, and awareness outcomes beyond the event day itself.',
   },
 ];
 
 const registrationJourney = [
   'Choose your event and submit your registration.',
-  'Receive confirmation and onboarding pack via WhatsApp/email.',
-  'Attend the event and complete a guided growth pathway.',
-  'Access follow-up opportunities through the IGHOST network.',
+  'Receive confirmation and follow-up communication from IGHOST.',
+  'Attend the event, camp, or activation and participate fully.',
+  'Continue growing through future opportunities in the IGHOST network.',
 ];
 
 function parseEvent(raw: Record<string, unknown>): EventItem | null {
@@ -86,9 +86,9 @@ export default function EventsPage() {
 
   const metrics = useMemo(
     () => [
-      { value: `${events.length}`, label: 'Flagship Events' },
-      { value: '12+', label: 'Monthly Activations' },
-      { value: '3', label: 'Impact Streams' },
+      { value: `${events.length}`, label: 'Current Program Listings' },
+      { value: '2021', label: 'Operating Since' },
+      { value: '4', label: 'Focus Areas Connected' },
     ],
     [events.length]
   );
@@ -121,11 +121,11 @@ export default function EventsPage() {
               className="architect-heading mt-5 text-4xl font-semibold text-[#121522] md:text-6xl"
               style={{ fontFamily: 'var(--font-space), sans-serif' }}
             >
-              Premium Event Architecture for Creative Growth
+              Events That Develop Talent and Build Community
             </h1>
             <p className="mt-4 max-w-3xl text-base text-muted md:text-lg">
-              Every IGHOST event is designed as a professional growth environment with clear
-              outcomes, production excellence, and pathways into long-term opportunities.
+              IGHOST hosts events, awards, and camps for artists and young people. Each program is
+              built to create exposure, practical growth, and a sense of belonging within the brand.
             </p>
           </div>
 
@@ -137,11 +137,11 @@ export default function EventsPage() {
               className="mt-2 text-2xl font-semibold text-[#121522]"
               style={{ fontFamily: 'var(--font-space), sans-serif' }}
             >
-              Designed Like a Professional Production
+              Built Around Real Participation
             </h2>
             <p className="mt-3 text-sm text-muted">
-              We combine mentorship, performance platforms, and leadership modules in one premium,
-              high-integrity event format.
+              Our events combine entertainment, personal development, and community-centered impact
+              in one accessible experience.
             </p>
           </div>
         </div>
@@ -224,11 +224,11 @@ export default function EventsPage() {
               className="mt-2 text-3xl font-semibold text-[#121522] md:text-4xl"
               style={{ fontFamily: 'var(--font-space), sans-serif' }}
             >
-              What Happens After You Register
+              What Happens After Registration
             </h2>
             <p className="mt-3 text-sm text-muted md:text-base">
-              We have refined onboarding, communication, and post-event support so every
-              participant gets a premium and predictable experience.
+              We use a simple process so participants can move from sign-up to attendance and then
+              into longer-term engagement with IGHOST.
             </p>
           </div>
 

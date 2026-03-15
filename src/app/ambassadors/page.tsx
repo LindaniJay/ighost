@@ -4,26 +4,23 @@ import AmbassadorForm from '../../components/AmbassadorForm';
 
 const requirements = [
   'R500 upfront contract payment',
-  'Professional ID picture',
+  'A small professional ID picture',
   'Certified ID copy or birth certificate (below 18)',
   'Proof of residence',
-  'Active TikTok or Facebook Account',
-  'Follow all our social media pages',
-  'Active contact number',
-  'Proof of Account (Banking details and address)'
+  'Active TikTok or Facebook account',
+  'Follow ALL our social media pages',
+  'Active contact number (for calls and emergencies)',
+  'Proof of account (banking details and address)',
 ];
 
 const benefits = [
   'Black Ghost Membership T-shirt',
-  'Leadership & training skills',
-  'Airtime every month end',
-  'Discounts on event tickets and clothing',
+  'Leadership skills and training skills',
+  'Opportunity to build character and life skills',
   'Free photoshoots',
-  'Commission for referrals',
-  'Charity work beneficiaries',
+  'Beneficiaries from our charity work',
   'Free Ghost items for 10+ customers monthly',
-  'Paying gigs & extra support',
-  'Free tickets to select events'
+  'Free tickets to selected events and tournaments',
 ];
 
 export default function AmbassadorsPage() {
@@ -38,8 +35,8 @@ export default function AmbassadorsPage() {
           Represent the Brand With Purpose
         </h1>
         <p className="mt-4 max-w-3xl text-base text-muted md:text-lg">
-          Join a structured leadership pathway where ambassadors support events, amplify our
-          message, and grow through training, exposure, and real responsibility.
+          Our Brand Ambassador program gives girls and boys opportunities to grow leadership,
+          confidence, and life skills while supporting IGHOST events and community initiatives.
         </p>
       </section>
 
@@ -90,15 +87,15 @@ export default function AmbassadorsPage() {
         </h2>
         <div className="mt-4 space-y-3 text-sm text-muted">
           <p>
-            The ambassador role runs on a 12-month contract and includes attendance at official
-            events, shoots, and campaign activities.
+            This is a 1 year contract. You can apply again once your contract expires.
           </p>
           <p>
-            IGHOST may use approved ambassador content for promotional and community engagement
-            purposes across digital and event channels.
+            By joining, you give IGHOST permission to use your pictures and video clips on social
+            media for brand and campaign purposes.
           </p>
           <p className="font-medium text-[#243041]">
-            We expect ambassadors to lead by example and represent the values of the organization.
+            Ambassadors are expected to attend events, photoshoots, meetings, and outings when
+            available, and to represent the brand with integrity.
           </p>
         </div>
       </section>

@@ -13,11 +13,11 @@ export default function ContactPage() {
           className="architect-heading mt-5 text-4xl font-semibold text-[#121522] md:text-6xl"
           style={{ fontFamily: 'var(--font-space), sans-serif' }}
         >
-          Start a Conversation
+          Contact IGHOST
         </h1>
         <p className="mt-4 max-w-2xl text-base text-muted md:text-lg">
-          Reach out for partnerships, event collaboration, ambassador support, or general
-          questions. Our team will respond as soon as possible.
+          Reach out for event information, ambassador support, or general questions. The PDF lists
+          WhatsApp as the primary contact point for the organization.
         </p>
       </section>
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
               Message
             </label>
             <textarea
-              placeholder="Tell us what you are looking to build together."
+              placeholder="Tell us how IGHOST can help you."
               rows={6}
               className="w-full rounded-xl border border-[#d2d7e0] bg-white px-4 py-3 text-sm outline-none focus:border-[#5f7695] focus:ring-2 focus:ring-[#d6dfec]"
               required
@@ -72,7 +72,7 @@ export default function ContactPage() {
 
           {sent && (
             <div className="rounded-xl border border-[#b9d8c7] bg-[#edf8f2] px-4 py-3 text-sm font-medium text-[#1f6946]">
-              Message sent successfully. We will reply shortly.
+              Message sent successfully. We will contact you shortly.
             </div>
           )}
         </form>
@@ -89,7 +89,7 @@ export default function ContactPage() {
             >
               +27 65 252 3189
             </a>
-            <p className="mt-1 text-sm text-muted">Fastest way to reach our operations team.</p>
+            <p className="mt-1 text-sm text-muted">Primary contact number listed in the IGHOST presentation.</p>
           </article>
 
           <article className="panel p-5">
@@ -114,8 +114,8 @@ export default function ContactPage() {
           </article>
 
           <article className="panel p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#5f7695]">Availability</p>
-            <p className="mt-2 text-sm text-muted">Monday to Friday, 08:00 to 17:00 SAST</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#5f7695]">Note</p>
+            <p className="mt-2 text-sm text-muted">Follow all IGHOST social media pages for ambassador and event updates.</p>
           </article>
         </aside>
       </section>
