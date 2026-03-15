@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f4f4f1;
+  --surface: #fbfbf9;
+  --surface-strong: #ffffff;
+  --ink: #141519;
+  --ink-muted: #5c5f66;
+  --line: #d9dbdf;
+  --brand: #2e4f7a;
+  --brand-soft: #5f7695;
+  --accent: #caa86a;
+  --radius-lg: 1.1rem;
+  --radius-xl: 1.6rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 12%, rgba(202, 168, 106, 0.22), transparent 38%),
+    radial-gradient(circle at 88% 9%, rgba(46, 79, 122, 0.15), transparent 42%),
+    linear-gradient(180deg, #f9f9f6 0%, var(--bg) 100%);
+  line-height: 1.6;
+  text-rendering: geometricPrecision;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.3;
+  background-image:
+    linear-gradient(to right, rgba(20, 21, 25, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 21, 25, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle at center, black 45%, transparent 95%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+a,
+button,
+input,
+textarea {
+  transition: all 0.2s ease;
+}
+
+::selection {
+  background: rgba(46, 79, 122, 0.24);
+  color: #0c1119;
+}
+
+.app-shell {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: color-mix(in oklab, var(--surface-strong) 86%, transparent);
+  box-shadow: 0 10px 35px rgba(11, 18, 30, 0.08);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.panel:hover {
+  border-color: color-mix(in oklab, var(--brand-soft) 34%, white);
+  box-shadow: 0 14px 38px rgba(11, 18, 30, 0.12);
+}
+
+.text-muted {
+  color: var(--ink-muted);
+}
+
+.architect-heading {
+  font-variation-settings: "opsz" 32;
+  letter-spacing: -0.04em;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid color-mix(in oklab, var(--brand) 35%, white);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--brand);
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.section-spacing {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.btn-primary {
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--brand), #24364e);
+  color: #f7f9fc;
+  padding: 0.85rem 1.35rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(36, 54, 78, 0.35);
+}
+
+.btn-secondary {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--ink);
+  padding: 0.85rem 1.35rem;
+  font-weight: 600;
+  border: 1px solid var(--line);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand-soft);
+}
+
+.rise {
+  animation: riseIn 550ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.glass-strip {
+  border: 1px solid color-mix(in oklab, var(--brand) 18%, white);
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.7), rgba(246, 249, 255, 0.62));
+  backdrop-filter: blur(8px);
+}
+
+.soft-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(95, 118, 149, 0.4), transparent);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ecefeb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8ba0bf, #5a7397);
+  border-radius: 999px;
+  border: 2px solid #ecefeb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #6d85a8, #435c7c);
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-spacing {
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
