@@ -3,19 +3,21 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const socialLinks = [
-  { href: 'https://www.instagram.com/', label: 'Instagram', icon: '/icons/instagram.svg' },
-  { href: 'https://www.facebook.com/', label: 'Facebook', icon: '/icons/facebook.svg' },
-  { href: 'https://www.tiktok.com/', label: 'TikTok', icon: '/icons/tiktok.svg' },
+  { href: 'https://www.instagram.com/', label: 'Instagram', icon: '/globe.svg' },
+  { href: 'https://www.facebook.com/', label: 'Facebook', icon: '/file.svg' },
+  { href: 'https://www.tiktok.com/', label: 'TikTok', icon: '/window.svg' },
 ];
 
 export default function Footer() {
   return (
     <footer className="w-full bg-white/80 backdrop-blur border-t border-[#e3e6ee] py-8 mt-16">
       <div className="mx-auto flex max-w-6xl flex-col md:flex-row items-center justify-between gap-6 px-4 md:px-8">
+        {/* IGHOST Logo and Brand */}
         <div className="flex items-center gap-3">
-          <Image src="/logo.png" alt="IGHOST Logo" width={40} height={40} className="rounded-xl" />
-          <span className="text-lg font-bold text-[#2e4f7a] tracking-tight">IGHOST</span>
+          <Image src="/ighost-logo.png" alt="IGHOST Logo" width={48} height={48} className="rounded-xl shadow-lg" />
+          <span className="text-xl font-extrabold text-[#2e4f7a] tracking-tight">IGHOST</span>
         </div>
+        {/* Navigation Links */}
         <nav className="flex flex-wrap gap-5 text-sm font-medium text-[#5f7695]">
           <Link href="/about">About</Link>
           <Link href="/events">Events</Link>
@@ -23,6 +25,7 @@ export default function Footer() {
           <Link href="/ambassadors">Ambassadors</Link>
           <Link href="/contact">Contact</Link>
         </nav>
+        {/* Social Icons */}
         <div className="flex gap-4">
           {socialLinks.map((link) => (
             <a
@@ -31,9 +34,9 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={link.label}
-              className="hover:scale-110 transition-transform"
+              className="rounded-full bg-[#f7f8fa] p-2 shadow-md hover:bg-[#caa86a]/20 hover:scale-110 transition-transform border border-[#e3e6ee]"
             >
-              <Image src={link.icon} alt={link.label} width={24} height={24} />
+              <Image src={link.icon} alt={link.label} width={28} height={28} />
             </a>
           ))}
         </div>
